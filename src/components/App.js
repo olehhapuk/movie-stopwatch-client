@@ -21,6 +21,8 @@ import EditShow from './EditShow';
 const PER_PAGE = 4;
 const SORT_BY = 'updatedAt';
 const SORT_ORDER = -1;
+const TOKEN =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlhMTU2MTJjMWM1ODc5YmFkNzM1MWUiLCJpYXQiOjE2Mzc0ODg5MTksImV4cCI6MTYzODA5MzcxOX0.tAAOVbwRcUMlwGkc2xSbPYwqgxIbYwTQ7LkkeC26FI8';
 
 function App() {
   const [shows, setShows] = useState([]);
@@ -47,7 +49,7 @@ function App() {
         sortOrder: SORT_ORDER,
       },
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlhMTU2MTJjMWM1ODc5YmFkNzM1MWUiLCJpYXQiOjE2Mzc0ODg5MTksImV4cCI6MTYzODA5MzcxOX0.tAAOVbwRcUMlwGkc2xSbPYwqgxIbYwTQ7LkkeC26FI8`,
+        Authorization: `Bearer ${TOKEN}`,
       },
     })
       .then((res) => {
